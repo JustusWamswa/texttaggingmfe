@@ -4,7 +4,7 @@ import NLPAnnotate from "./components/NLPAnnotate";
 
 const App = () => (
   <div>
-    <NLPAnnotate />
+    <NLPAnnotate documentText={"This is a placeholder text"}/>
   </div>
 );
 const root = ReactDOM.createRoot(document.getElementById("app"))

@@ -44,7 +44,9 @@ module.exports = (_, argv) => ({
       name: "texttaggingmfe",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        './NLPAnnotate': './src/components/NLPAnnotate',
+      },
       shared: {
         ...deps,
         react: {

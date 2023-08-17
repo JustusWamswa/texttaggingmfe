@@ -1,20 +1,21 @@
 import React from 'react'
 import NLPAnnotator from "react-nlp-annotate";
 
-const labels = [
-    {
-        id: "gryffindor",
-        displayName: "Gryffindor",
-        description: "Daring, strong nerve and chivalry."
-    },
-    {
-        id: "slytherin",
-        displayName: "Slytherin",
-        description: "Cunning and ambitious. Possibly dark wizard."
-    }
-]
+function NLPAnnotate({documentText}) {
 
-function NLPAnnotate() {
+    const labels = [
+        {
+            id: "gryffindor",
+            displayName: "Gryffindor",
+            description: "Daring, strong nerve and chivalry."
+        },
+        {
+            id: "slytherin",
+            displayName: "Slytherin",
+            description: "Cunning and ambitious. Possibly dark wizard."
+        }
+    ]
+
     return (
         <div>
             <NLPAnnotator
@@ -25,7 +26,7 @@ function NLPAnnotate() {
                 type="label-relationships"
                 labels={labels}
                 multipleLabels={false}
-                document="Harry was an honest to god good man"
+                document={documentText}
                 onChange={(output) => {
                     console.log("Output is...", output);
                 }}
